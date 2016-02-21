@@ -36,6 +36,7 @@
 @property SocketAckManager *ackHandlers;
 @property NSArray *handlers;
 @property SocketAnyEvent *anyHandler;
+@property NSArray *waitingData;
 
 @end
 
