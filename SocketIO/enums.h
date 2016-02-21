@@ -44,7 +44,29 @@ typedef NS_OPTIONS(NSUInteger, OpCode) {
     //B-F reserved.
 };
 
+typedef NS_OPTIONS(NSUInteger, SocketIOClientStatus) {
+    SocketIOClientStatusNotConnected,
+    SocketIOClientStatusClosed,
+    SocketIOClientStatusConnecting,
+    SocketIOClientStatusConnected,
+    SocketIOClientStatusReconnecting
+};
+
 typedef NS_OPTIONS(NSUInteger, InternalErrorCode) {
     // 0-999 WebSocket status codes not used
     InternalErrorCodeOutputStreamWriteError  = 1
 };
+
+
+typedef enum {
+    SocketEnginePacketTypeOpen,
+    SocketEnginePacketTypeClose,
+    SocketEnginePacketTypePing,
+    SocketEnginePacketTypePong,
+    SocketEnginePacketTypeMessage,
+    SocketEnginePacketTypeUpgrade,
+    SocketEnginePacketTypeNoop
+}SocketEnginePacketType;
+
+typedef void (^onAckCallbackBlock)(NSArray *);
+

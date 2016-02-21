@@ -21,7 +21,44 @@
 //  THE SOFTWARE.
 
 #import "SocketIOClient.h"
+#import "SocketAckManager.h"
+
+
+@interface SocketIOClient()
+@property (readwrite, assign) id<SocketEngineSpec> engine;
+@property (readwrite, assign) SocketIOClientStatus status;
+@property (readwrite, assign) NSInteger currentAck;
+@property (readwrite, assign) NSInteger reconnectAttempts;
+@property (readwrite, assign) dispatch_queue_t handleQueue;
+
+@property NSInteger currentReconnectAttempt;
+@property NSTimer* reconnectTimer;
+@property SocketAckManager *ackHandlers;
+@property NSArray *handlers;
+@property SocketAnyEvent *anyHandler;
+
+@end
 
 @implementation SocketIOClient
+static dispatch_queue_t emitQueue;
+static NSString* logType;
+static dispatch_queue_t parseQueue;
 
+-(void)internalInit{
+    _ackHandlers = [[SocketAckManager alloc] init];
+_currentReconnectAttempt = 0;
+    _handleQueue = dispatch_get_main_queue();
+    _forceNew = NO;
+    _nsp = @"/";
+    _reconnects = YES;
+    _reconnectWait = 10;
+    _handlers = [@[] mutableCopy];
+}
++ (void) initialize {
+    if (self == [SocketIOClient class]) {
+        parseQueue = dispatch_queue_create("com.socketio.parseQueue", DISPATCH_QUEUE_SERIAL);
+        logType = @"SocketIOClient";
+        emitQueue = dispatch_queue_create("com.socketio.emitQueue", DISPATCH_QUEUE_SERIAL);
+    }
+}
 @end

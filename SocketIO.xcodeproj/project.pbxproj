@@ -21,6 +21,9 @@
 		EC91EEF01C76417E0080394E /* SecKey.m in Sources */ = {isa = PBXBuildFile; fileRef = EC91EEEF1C76417E0080394E /* SecKey.m */; };
 		EC91EEF41C768E7E0080394E /* SSLCipherSuiteObject.m in Sources */ = {isa = PBXBuildFile; fileRef = EC91EEF31C768E7E0080394E /* SSLCipherSuiteObject.m */; };
 		EC91EEF71C7A4BD50080394E /* SocketIOClient.m in Sources */ = {isa = PBXBuildFile; fileRef = EC91EEF61C7A4BD50080394E /* SocketIOClient.m */; };
+		EC91EF061C7A61890080394E /* SocketAnyEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = EC91EF051C7A61890080394E /* SocketAnyEvent.m */; };
+		EC91EF091C7A627C0080394E /* SocketAckManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EC91EF081C7A627C0080394E /* SocketAckManager.m */; };
+		EC91EF0C1C7A62880080394E /* SocketAck.m in Sources */ = {isa = PBXBuildFile; fileRef = EC91EF0B1C7A62880080394E /* SocketAck.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +68,13 @@
 		EC91EEF81C7A4BF50080394E /* SocketEngineClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketEngineClient.h; sourceTree = "<group>"; };
 		EC91EEFB1C7A4CC80080394E /* SocketParsable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketParsable.h; sourceTree = "<group>"; };
 		EC91EEFC1C7A4E190080394E /* SocketClientSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketClientSpec.h; sourceTree = "<group>"; };
+		EC91EF031C7A5D7F0080394E /* SocketEngineSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketEngineSpec.h; sourceTree = "<group>"; };
+		EC91EF041C7A61890080394E /* SocketAnyEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketAnyEvent.h; sourceTree = "<group>"; };
+		EC91EF051C7A61890080394E /* SocketAnyEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketAnyEvent.m; sourceTree = "<group>"; };
+		EC91EF071C7A627C0080394E /* SocketAckManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketAckManager.h; sourceTree = "<group>"; };
+		EC91EF081C7A627C0080394E /* SocketAckManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketAckManager.m; sourceTree = "<group>"; };
+		EC91EF0A1C7A62880080394E /* SocketAck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketAck.h; sourceTree = "<group>"; };
+		EC91EF0B1C7A62880080394E /* SocketAck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketAck.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +173,13 @@
 				EC91EEFB1C7A4CC80080394E /* SocketParsable.h */,
 				EC91EEF81C7A4BF50080394E /* SocketEngineClient.h */,
 				EC91EEFC1C7A4E190080394E /* SocketClientSpec.h */,
+				EC91EF031C7A5D7F0080394E /* SocketEngineSpec.h */,
+				EC91EF041C7A61890080394E /* SocketAnyEvent.h */,
+				EC91EF051C7A61890080394E /* SocketAnyEvent.m */,
+				EC91EF071C7A627C0080394E /* SocketAckManager.h */,
+				EC91EF081C7A627C0080394E /* SocketAckManager.m */,
+				EC91EF0A1C7A62880080394E /* SocketAck.h */,
+				EC91EF0B1C7A62880080394E /* SocketAck.m */,
 			);
 			name = Client;
 			sourceTree = "<group>";
@@ -282,11 +299,14 @@
 				EC91EEC61C76077B0080394E /* ViewController.m in Sources */,
 				EC91EEF41C768E7E0080394E /* SSLCipherSuiteObject.m in Sources */,
 				EC91EEE71C7607FA0080394E /* WebSocket.m in Sources */,
+				EC91EF0C1C7A62880080394E /* SocketAck.m in Sources */,
+				EC91EF091C7A627C0080394E /* SocketAckManager.m in Sources */,
 				EC91EEC31C76077B0080394E /* AppDelegate.m in Sources */,
 				EC91EEC01C76077B0080394E /* main.m in Sources */,
 				EC91EEED1C7615C80080394E /* SSLSecurity.m in Sources */,
 				52125B853305581227762013 /* WSResponse.m in Sources */,
 				EC91EEF01C76417E0080394E /* SecKey.m in Sources */,
+				EC91EF061C7A61890080394E /* SocketAnyEvent.m in Sources */,
 				EC91EEF71C7A4BD50080394E /* SocketIOClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

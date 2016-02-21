@@ -23,7 +23,24 @@
 #import <Foundation/Foundation.h>
 #import "SocketEngineClient.h"
 #import "SocketParsable.h"
+#import "SocketEngineSpec.h"
+#import "enums.h"
+#import "SocketAnyEvent.h"
+
+typedef void (^onAnyHandlerBlock)(SocketAnyEvent *);
 
 @interface SocketIOClient : NSObject <SocketEngineClient, SocketParsable>
 
+@property (readonly, assign) id<SocketEngineSpec> engine;
+@property (readonly, assign) SocketIOClientStatus status;
+
+@property NSURL* socketURL;
+@property BOOL forceNew;
+@property NSString* nsp;
+@property NSSet* options; //SocketIOClientOption
+@property BOOL reconnects;
+@property NSInteger reconnectWait;
+
+
+-(NSString *)sid;
 @end
