@@ -20,6 +20,7 @@
 		EC91EEED1C7615C80080394E /* SSLSecurity.m in Sources */ = {isa = PBXBuildFile; fileRef = EC91EEEC1C7615C80080394E /* SSLSecurity.m */; };
 		EC91EEF01C76417E0080394E /* SecKey.m in Sources */ = {isa = PBXBuildFile; fileRef = EC91EEEF1C76417E0080394E /* SecKey.m */; };
 		EC91EEF41C768E7E0080394E /* SSLCipherSuiteObject.m in Sources */ = {isa = PBXBuildFile; fileRef = EC91EEF31C768E7E0080394E /* SSLCipherSuiteObject.m */; };
+		EC91EEF71C7A4BD50080394E /* SocketIOClient.m in Sources */ = {isa = PBXBuildFile; fileRef = EC91EEF61C7A4BD50080394E /* SocketIOClient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,10 @@
 		EC91EEEF1C76417E0080394E /* SecKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecKey.m; sourceTree = "<group>"; };
 		EC91EEF21C768E7E0080394E /* SSLCipherSuiteObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSLCipherSuiteObject.h; sourceTree = "<group>"; };
 		EC91EEF31C768E7E0080394E /* SSLCipherSuiteObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSLCipherSuiteObject.m; sourceTree = "<group>"; };
+		EC91EEF51C7A4BD50080394E /* SocketIOClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketIOClient.h; sourceTree = "<group>"; };
+		EC91EEF61C7A4BD50080394E /* SocketIOClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketIOClient.m; sourceTree = "<group>"; };
+		EC91EEF81C7A4BF50080394E /* SocketEngineClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketEngineClient.h; sourceTree = "<group>"; };
+		EC91EEFB1C7A4CC80080394E /* SocketParsable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketParsable.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				EC91EEF11C7641890080394E /* SSLHelpers */,
+				EC91EEFB1C7A4CC80080394E /* SocketParsable.h */,
 				EC91EEE51C7607FA0080394E /* WebSocket.h */,
 				EC91EEE61C7607FA0080394E /* WebSocket.m */,
 				5212580112F7333FD878E0A3 /* WSResponse.m */,
@@ -152,6 +158,9 @@
 				EC91EEE91C7614A30080394E /* SSLCert.m */,
 				EC91EEEB1C7615C80080394E /* SSLSecurity.h */,
 				EC91EEEC1C7615C80080394E /* SSLSecurity.m */,
+				EC91EEF51C7A4BD50080394E /* SocketIOClient.h */,
+				EC91EEF61C7A4BD50080394E /* SocketIOClient.m */,
+				EC91EEF81C7A4BF50080394E /* SocketEngineClient.h */,
 			);
 			name = Client;
 			sourceTree = "<group>";
@@ -276,6 +285,7 @@
 				EC91EEED1C7615C80080394E /* SSLSecurity.m in Sources */,
 				52125B853305581227762013 /* WSResponse.m in Sources */,
 				EC91EEF01C76417E0080394E /* SecKey.m in Sources */,
+				EC91EEF71C7A4BD50080394E /* SocketIOClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

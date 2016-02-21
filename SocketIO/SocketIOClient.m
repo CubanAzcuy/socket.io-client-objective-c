@@ -1,3 +1,5 @@
+//
+//  SocketIOClient.m
 //  SocketIO
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -18,14 +20,8 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
-#import "enums.h"
+#import "SocketIOClient.h"
 
+@implementation SocketIOClient
 
-@interface WSResponse : NSObject
-@property bool isFin;
-@property enum OpCode code;
-@property NSInteger bytesLeft;
-@property int frameCount;
-@property NSMutableData* buffer;
 @end

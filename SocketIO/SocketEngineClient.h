@@ -1,3 +1,5 @@
+//
+//  SocketEngineClient.h
 //  SocketIO
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -19,13 +21,17 @@
 //  THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
-#import "enums.h"
 
+@protocol SocketEngineClient
+@required
+-(void)engineDidError:(NSString*)reason;
+@required
+-(void)engineDidClose:(NSString*)reason;
+@required
+-(void)parseEngineMessage:(NSString*)reason;
+@required
+-(void)parseEngineBinaryData:(NSData *)data;
 
-@interface WSResponse : NSObject
-@property bool isFin;
-@property enum OpCode code;
-@property NSInteger bytesLeft;
-@property int frameCount;
-@property NSMutableData* buffer;
+-(void)engineDidOpen:(NSString*)reason;
 @end
+
