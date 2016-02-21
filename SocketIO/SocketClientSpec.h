@@ -1,5 +1,5 @@
 //
-//  SocketIOClient.h
+//  SocketClientSpec.h
 //  SocketIO
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -21,9 +21,31 @@
 //  THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
-#import "SocketEngineClient.h"
-#import "SocketParsable.h"
 
-@interface SocketIOClient : NSObject <SocketEngineClient, SocketParsable>
+@protocol SocketClientSpec <NSObject>
 
+@property NSString* nsp;
+@property NSArray* waitingPackets;
+
+@required
+-(void)didConnect;
+@required
+-(void)didDisconnect:(NSString*)reason;
+@required
+-(void)didError:(NSString*)reason;
+@required
+-(void)handleAck:(NSInteger)ack data:(NSArray *)data;
+@required
+-(void)handleEvent:(NSString*)event data:(NSArray *)data isInternalMessage:(BOOL)isInternalMessage withAck:(NSInteger)ack;
+@required
+-(void)joinNamespace:(NSString*)reason;
 @end
+
+#warning No Default Implentation
+//extension SocketClientSpec {
+//    func didError(reason: String) {
+//        DefaultSocketLogger.Logger.error("%@", type: "SocketIOClient", args: reason)
+//        
+//        handleEvent("error", data: [reason], isInternalMessage: true, withAck: -1)
+//    }
+//}

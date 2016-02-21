@@ -64,6 +64,7 @@
 		EC91EEF61C7A4BD50080394E /* SocketIOClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketIOClient.m; sourceTree = "<group>"; };
 		EC91EEF81C7A4BF50080394E /* SocketEngineClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketEngineClient.h; sourceTree = "<group>"; };
 		EC91EEFB1C7A4CC80080394E /* SocketParsable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketParsable.h; sourceTree = "<group>"; };
+		EC91EEFC1C7A4E190080394E /* SocketClientSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketClientSpec.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,7 +149,6 @@
 			isa = PBXGroup;
 			children = (
 				EC91EEF11C7641890080394E /* SSLHelpers */,
-				EC91EEFB1C7A4CC80080394E /* SocketParsable.h */,
 				EC91EEE51C7607FA0080394E /* WebSocket.h */,
 				EC91EEE61C7607FA0080394E /* WebSocket.m */,
 				5212580112F7333FD878E0A3 /* WSResponse.m */,
@@ -160,7 +160,9 @@
 				EC91EEEC1C7615C80080394E /* SSLSecurity.m */,
 				EC91EEF51C7A4BD50080394E /* SocketIOClient.h */,
 				EC91EEF61C7A4BD50080394E /* SocketIOClient.m */,
+				EC91EEFB1C7A4CC80080394E /* SocketParsable.h */,
 				EC91EEF81C7A4BF50080394E /* SocketEngineClient.h */,
+				EC91EEFC1C7A4E190080394E /* SocketClientSpec.h */,
 			);
 			name = Client;
 			sourceTree = "<group>";
